@@ -1,0 +1,122 @@
+/*
+Image Attribution
+
+All images used belong to:
+
+Markus Spiske - https://500px.com/markusspiske (Links to an external site.)Links to an external site. 
+
+Yinan Chen - https://500px.com/webmaster85 (Links to an external site.)Links to an external site. 
+
+Fahim Akhter - https://500px.com/fahimakhter (Links to an external site.)Links to an external site. 
+
+Layout
+
+In your webpage there will be 3 layouts. Use percentages to control the width of the <li> elements and the margins between them.
+
+1. Less than 600px - one column layout
+
+2. Between 600px and 1200px - two column layout
+
+3. Above 1200px - four column layout
+
+ 
+
+Transitions and Transforms
+
+Each image should have a transition and transform applied in CSS
+
+The transition property should be your transform which must have a minimum duration of 0.2s and must specify a transition-timing-function property such as "ease-in".
+
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Special+Elite|VT323");
+
+
+h1 {
+    
+  color: #2c3e50;
+  text-align: center;
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+  font-weight: 300;
+  border-bottom: 1px solid silver; 
+  padding: 0.3em;
+    
+}
+
+body {
+    font-family: 'Permanent Marker', cursive, 'VT323', monospace, sans-serif, 'Special Elite', cursive;
+    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	color:  #2c3e50;
+    background-color: #fff linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(242, 242, 242, 1) 100%);
+        position: absolute;
+    
+}
+.wrap {
+width: 90%;
+margin: 2em auto;
+       
+}
+
+
+
+
+ul {
+  
+  list-style: none; 
+  width: 100%;
+  padding: 0;
+  margin-top: 2.5em;
+    
+}
+
+li {
+ margin: 1.5em 0;
+ float: left;
+ text-align: center;
+  
+}
+
+picture {
+   max-width: 90%; 
+    
+}
+img {
+max-width: 90%;
+border-radius: 4px;
+box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2) ;
+filter: saturate(70%) brightness(88%) grayscale(0.3);
+transition: 0.8s ease-in-out;
+position: relative;
+ 
+}
+
+
+footer {
+        clear: both;
+        line-height: 4em;
+        text-align: right;
+    }
+
+
+  @media screen and (min-width:600px) {
+        li {
+            width: 50%;
+        }
+        img:hover {
+            transform: scale(1.1) translate(0, 0);
+        }
+    }
+
+ @media screen and (min-width:1200px) {
+        li {
+            width: 25%;
+        }
+        img:hover {
+            transform: scale(1.2) translate(0, -0.5em);
+        }
+    }
